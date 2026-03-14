@@ -1,0 +1,143 @@
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-3) 60%, #1c3a5c 100%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 110px 24px 100px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 70% 50%, rgba(245, 166, 35, 0.08) 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(245, 166, 35, 0.06) 0%, transparent 50%);
+}
+
+.hero-bg {
+    display: none;
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 580px;
+}
+
+.hero-title {
+    font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.12;
+    color: var(--white);
+    margin: 14px 0 18px;
+}
+
+.gold-text {
+    color: var(--gold);
+}
+
+.hero-sub {
+    font-size: 1.08rem;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.7;
+    margin-bottom: 10px;
+    max-width: 480px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.hero-image-wrap {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: visible;
+}
+
+.hero-img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.hero-badge {
+    position: absolute;
+    bottom: -20px;
+    left: -24px;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    min-width: 160px;
+}
+
+.badge-stars {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.badge-label {
+    font-weight: 800;
+    font-size: 0.88rem;
+    color: var(--navy);
+    margin-top: 2px;
+}
+
+.badge-count {
+    font-size: 0.78rem;
+    color: var(--grey);
+}
+
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    line-height: 0;
+}
+
+.hero-wave svg {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .check-list {
+        align-items: flex-start;
+        display: inline-flex;
+    }
+
+    .hero-image-wrap {
+        display: none;
+    }
+}

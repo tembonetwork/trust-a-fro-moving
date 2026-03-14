@@ -1,0 +1,117 @@
+.footer {
+    background: var(--navy);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 64px 24px 0;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: var(--white);
+    letter-spacing: 0.05em;
+    margin-bottom: 14px;
+}
+
+.footer-logo .dot {
+    color: var(--gold-lt);
+}
+
+.footer-logo .fro {
+    color: var(--gold);
+}
+
+.footer-logo .sub {
+    font-size: 0.7rem;
+    color: var(--gold-lt);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-left: 6px;
+    align-self: flex-end;
+}
+
+.footer-tagline {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-stars {
+    font-size: 0.88rem;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-stars span {
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 600;
+}
+
+.footer-heading {
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links li a,
+.footer-links li span {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.65);
+    transition: color 0.2s;
+    line-height: 1.4;
+}
+
+.footer-links li a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    padding: 20px 0;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+}
