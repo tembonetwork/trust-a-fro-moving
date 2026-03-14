@@ -42,7 +42,7 @@ export default function Hero() {
                 {/* Right Image */}
                 <div className="hero-image-wrap fade-up fade-up-d2">
                     <img
-                        src="/hero-movers.png"
+                        src={`${import.meta.env.BASE_URL}hero-movers.png`}
                         alt="Trust A Fro Moving team loading a truck"
                         className="hero-img"
                     />
